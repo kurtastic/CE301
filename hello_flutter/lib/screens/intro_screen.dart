@@ -1,7 +1,8 @@
-// ignore_for_file: prefer_const_constructors
+// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 
 import 'package:flutter/material.dart';
 import 'package:hello_flutter/shared/menu_drawer.dart';
+import '../shared/menu_bottom.dart';
 
 class IntroScreen extends StatelessWidget {
   const IntroScreen({ Key? key }) : super(key: key);
@@ -12,6 +13,7 @@ class IntroScreen extends StatelessWidget {
             //charactersitics of material app //container widget//create basic layeout structure fro other widgets
             appBar: AppBar(title: Text('Globo Fitness')), //Application bar created in scaffold with text Global fitness
             drawer: MenuDrawer(),
+            bottomNavigationBar: MenuBottom(),
             body: Container(
                 decoration: BoxDecoration(
                     image: DecorationImage(
@@ -37,3 +39,4 @@ class IntroScreen extends StatelessWidget {
                 ))));
   }
 }
+

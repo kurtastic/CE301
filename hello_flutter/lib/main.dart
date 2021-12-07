@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 
 import 'package:flutter/material.dart';
+import 'package:hello_flutter/screens/bmi_screen.dart';
 
 import 'package:hello_flutter/screens/intro_screen.dart';
 
@@ -17,7 +18,12 @@ class GlobeApp extends StatelessWidget {
     // needs to be overided //called when widget is drawn on screen
     return MaterialApp(
         //type of app we are creating //returning a new instance of Material app
-        theme: ThemeData(primarySwatch: Colors.blueGrey),
-        home: IntroScreen());
+        theme: ThemeData(primarySwatch: Colors.teal),
+        routes:{
+          '/': (context) => IntroScreen(),
+          '/bmi': (context) => BmiScreen(),
+        } ,
+        initialRoute: '/',
+        );
   }
 }
